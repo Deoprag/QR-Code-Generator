@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    background: #525763;
+}
+
+.wrapper{
+    height: 290px;
+    background: #FFFFFF;
+    max-width: 410px;
+    border-radius: 7px;
+    padding: 20px 30px;
+    transition: height 0.2s ease;
+}
+
+header h1{
+    font-size: 28px;
+    font-weight: 500;
+}
+
+header p{
+    margin-top: 7px;
+    font-size: 16px;
+    color: #444;
+}
+
+.wrapper .form{
+    margin: 20px 0 30px;
+}
+
+.form :where(input, button){
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+}
+
+.form input{
+    border-bottom: 1px solid #ccc;
+    padding: 0 15px;
+    font-size: 18px;
+}
+
+.form button{
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: white;
+    background-color: #525763;
+}
+
+.form button:hover{
+    background-color: #3f444e;
+    scale: 0.98;
+}
+
+.wrapper .qr-code{
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 33px 0;
+}
+
+.qr-code .download-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 80%;
+    padding: 10px;
+    border: none;
+    color: white;
+    background-color: #525763;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.download-btn:hover{
+    background-color: #3f444e;
+    scale: 0.98;
+}
+
+.wrapper.active{
+    height: 600px;
+}
+
+.wrapper.active .qr-code{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
